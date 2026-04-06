@@ -7,28 +7,26 @@ description: A custom server sided trainer/menu for FiveM, including full permis
 
 tasks:
   # Download default resources
-  # - action: download_github
-  #   src: https://github.com/citizenfx/cfx-server-data
-  #   ref: master
-  #   subpath: resources
-  #   dest: ./resources
-
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     ref: master
-    subpath: resources/[system]
-    dest: ./resources/[cfx-default]/[system]
-
-  # - action: remove_path
-  #   path: ./resources/[gameplay]/chat
+    subpath: resources
+    dest: ./resources
 
   - action: remove_path
-    path: ./resources/[cfx-default]/[system]/[builders]
+    path: ./resources/[gameplay]/chat
+
+  - action: remove_path
+    path: ./resources/[system]/[builders]
 
   # Download server.cfg
   - action: download_file
     url: https://raw.githubusercontent.com/feelfreetofee/vMenu-recipe/main/server.cfg
     path: ./server.cfg
+
+  - action: download_file
+    url: https://avatars.githubusercontent.com/u/31419184?s=96
+    path: ./server_icon.png
 
   # Download vMenu
   - action: download_file
@@ -36,7 +34,7 @@ tasks:
     url: https://github.com/TomGrobbe/vMenu/releases/download/v3.8.7/vMenu-3.8.7.zip
 
   - action: unzip
-    dest: ./resources/vMenu
+    dest: ./resources/[local]/vMenu
     src: ./tmp/vmenu.zip
 
   # Cleanup
