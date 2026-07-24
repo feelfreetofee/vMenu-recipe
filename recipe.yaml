@@ -24,14 +24,10 @@ tasks:
     url: https://raw.githubusercontent.com/feelfreetofee/vMenu-recipe/main/server.cfg
     path: ./server.cfg
 
-  - action: download_file
-    url: https://avatars.githubusercontent.com/u/31419184?s=96
-    path: ./server_icon.png
-
   # Download vMenu
   - action: download_file
     path: ./tmp/vmenu.zip
-    url: null
+    url: https://github.com/TomGrobbe/vMenu/releases/download/v3.8.23/vMenu-3.8.23.zip
 
   - action: unzip
     dest: ./resources/[local]/vMenu
