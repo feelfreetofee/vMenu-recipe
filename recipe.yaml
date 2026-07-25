@@ -27,7 +27,7 @@ tasks:
   # Download vMenu
   - action: download_file
     path: ./tmp/vmenu.zip
-    url: https://github.com/TomGrobbe/vMenu/releases/download/v3.8.23/vMenu-3.8.23.zip
+    url: null
 
   - action: unzip
     dest: ./resources/[local]/vMenu
